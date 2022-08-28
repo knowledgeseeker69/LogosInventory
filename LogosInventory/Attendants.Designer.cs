@@ -29,8 +29,12 @@ namespace LogosInventory
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendants));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NewAttendantBtn = new LogosInventory.CustomButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.AttendantTable = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,12 +44,53 @@ namespace LogosInventory
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NewAttendantBtn = new LogosInventory.CustomButton();
-            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewAttendantBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.NewAttendantBtn);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.AttendantTable);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 498);
+            this.panel1.TabIndex = 0;
+            // 
+            // NewAttendantBtn
+            // 
+            this.NewAttendantBtn.Image = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.Image")));
+            this.NewAttendantBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.ImageHover")));
+            this.NewAttendantBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.ImageNormal")));
+            this.NewAttendantBtn.Location = new System.Drawing.Point(351, 409);
+            this.NewAttendantBtn.Name = "NewAttendantBtn";
+            this.NewAttendantBtn.Size = new System.Drawing.Size(81, 62);
+            this.NewAttendantBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.NewAttendantBtn.TabIndex = 7;
+            this.NewAttendantBtn.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(308, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Manage Attendants";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
             // 
             // AttendantTable
             // 
@@ -68,12 +113,12 @@ namespace LogosInventory
             this.Column4,
             this.Column5,
             this.Column6});
-            this.AttendantTable.Location = new System.Drawing.Point(-1, 79);
+            this.AttendantTable.Location = new System.Drawing.Point(0, 76);
             this.AttendantTable.Name = "AttendantTable";
             this.AttendantTable.RowHeadersWidth = 51;
             this.AttendantTable.RowTemplate.Height = 24;
-            this.AttendantTable.Size = new System.Drawing.Size(801, 314);
-            this.AttendantTable.TabIndex = 0;
+            this.AttendantTable.Size = new System.Drawing.Size(800, 314);
+            this.AttendantTable.TabIndex = 4;
             // 
             // Column7
             // 
@@ -139,57 +184,28 @@ namespace LogosInventory
             this.Column6.Name = "Column6";
             this.Column6.Width = 59;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(307, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Manage Attendants";
-            // 
-            // NewAttendantBtn
-            // 
-            this.NewAttendantBtn.Image = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.Image")));
-            this.NewAttendantBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.ImageHover")));
-            this.NewAttendantBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("NewAttendantBtn.ImageNormal")));
-            this.NewAttendantBtn.Location = new System.Drawing.Point(350, 412);
-            this.NewAttendantBtn.Name = "NewAttendantBtn";
-            this.NewAttendantBtn.Size = new System.Drawing.Size(81, 62);
-            this.NewAttendantBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.NewAttendantBtn.TabIndex = 3;
-            this.NewAttendantBtn.TabStop = false;
-            // 
             // Attendants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 498);
-            this.Controls.Add(this.NewAttendantBtn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.AttendantTable);
+            this.Controls.Add(this.panel1);
             this.Name = "Attendants";
             this.Text = "Attendants";
-            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewAttendantBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private CustomButton NewAttendantBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView AttendantTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -199,8 +215,5 @@ namespace LogosInventory
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn Column6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private CustomButton NewAttendantBtn;
     }
 }

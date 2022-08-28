@@ -56,6 +56,7 @@ namespace LogosInventory
                     cmd.ExecuteNonQuery();
                     Con.Close();
                     MessageBox.Show(this, "Product Added!");
+                    this.Dispose();
                 }
                 catch (Exception Ex)
                 {
@@ -138,6 +139,16 @@ namespace LogosInventory
         private void ExpiryDate_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -21,6 +21,23 @@ namespace LogosInventory
             InitializeComponent();
             ShowProduct();
         }
+        private Form WorkingForm = null;
+        private void OpenNewForm(Form NewForm)
+        {
+            if (WorkingForm != null)
+                WorkingForm.Close();
+            WorkingForm = NewForm;
+            NewForm.TopLevel = false;
+            NewForm.FormBorderStyle = FormBorderStyle.None;
+            NewForm.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(NewForm);
+            MainPanel.Tag = NewForm;
+            NewForm.BringToFront();
+            NewForm.Show();
+
+
+        }
+
 
         private void ShowProduct()
         {
@@ -57,7 +74,7 @@ namespace LogosInventory
                 AddProductForm.CategoryCombo.Text = ProductTable.Rows[e.RowIndex].Cells[5].Value.ToString();
 
                 AddProductForm.SaveBtn.Enabled = false;
-                AddProductForm.Updatebtn.Enabled = true;
+                AddProductForm.UpdateBtn.Enabled = true;
             }
             else if (colName == "Delete")
             {
@@ -72,6 +89,16 @@ namespace LogosInventory
             }
             ShowProduct();
 
+        }
+
+        private void customButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void AddProductBtn_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(new AddProduct());
         }
     }
 }

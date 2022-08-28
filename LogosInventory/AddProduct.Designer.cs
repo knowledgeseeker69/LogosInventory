@@ -41,7 +41,8 @@ namespace LogosInventory
             this.ExpiryDate = new System.Windows.Forms.DateTimePicker();
             this.NewCatBtn = new System.Windows.Forms.Button();
             this.CategoryCombo = new System.Windows.Forms.ComboBox();
-            this.Updatebtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -158,26 +159,38 @@ namespace LogosInventory
             this.CategoryCombo.TabIndex = 6;
             this.CategoryCombo.SelectedIndexChanged += new System.EventHandler(this.CategoryCombo_SelectedIndexChanged);
             // 
-            // Updatebtn
+            // UpdateBtn
             // 
-            this.Updatebtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebtn.Location = new System.Drawing.Point(318, 356);
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(105, 54);
-            this.Updatebtn.TabIndex = 4;
-            this.Updatebtn.Text = "Update";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            this.Updatebtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            this.UpdateBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Location = new System.Drawing.Point(238, 356);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(92, 54);
+            this.UpdateBtn.TabIndex = 7;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.Location = new System.Drawing.Point(365, 356);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(87, 54);
+            this.CancelBtn.TabIndex = 9;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 450);
+            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.CategoryCombo);
             this.Controls.Add(this.ExpiryDate);
             this.Controls.Add(this.NewCatBtn);
-            this.Controls.Add(this.Updatebtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.Price);
@@ -209,6 +222,7 @@ namespace LogosInventory
         public System.Windows.Forms.DateTimePicker ExpiryDate;
         public System.Windows.Forms.ComboBox CategoryCombo;
         public System.Windows.Forms.Button SaveBtn;
-        public System.Windows.Forms.Button Updatebtn;
+        private System.Windows.Forms.Button CancelBtn;
+        public System.Windows.Forms.Button UpdateBtn;
     }
 }

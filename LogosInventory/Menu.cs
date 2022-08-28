@@ -47,5 +47,15 @@ namespace LogosInventory
         {
             OpenNewForm(new Category());
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

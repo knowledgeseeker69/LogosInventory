@@ -36,5 +36,7 @@ namespace LogosInventory
             Con.Close();
 
         }
+
+
     }
 }

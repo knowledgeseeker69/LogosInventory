@@ -29,9 +29,12 @@ namespace LogosInventory
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category));
             this.CategoryTable = new System.Windows.Forms.DataGridView();
             this.AddCatbtn = new System.Windows.Forms.Button();
+            this.customButton1 = new LogosInventory.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // CategoryTable
@@ -57,17 +60,33 @@ namespace LogosInventory
             this.AddCatbtn.UseVisualStyleBackColor = true;
             this.AddCatbtn.Click += new System.EventHandler(this.AddCatbtn_Click);
             // 
+            // customButton1
+            // 
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = null;
+            this.customButton1.ImageNormal = null;
+            this.customButton1.Location = new System.Drawing.Point(12, 12);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(46, 43);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 4;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
             // Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 514);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(848, 514);
+            this.Controls.Add(this.customButton1);
             this.Controls.Add(this.AddCatbtn);
             this.Controls.Add(this.CategoryTable);
             this.Name = "Category";
             this.Text = "Category";
             this.Load += new System.EventHandler(this.Category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CategoryTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,5 +95,6 @@ namespace LogosInventory
 
         private System.Windows.Forms.DataGridView CategoryTable;
         private System.Windows.Forms.Button AddCatbtn;
+        private CustomButton customButton1;
     }
 }

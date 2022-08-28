@@ -31,18 +31,18 @@ namespace LogosInventory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.customButton1 = new LogosInventory.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AttendantMenuBtn = new LogosInventory.CustomButton();
             this.CategoryMenuBtn = new LogosInventory.CustomButton();
             this.ProductMenuBtn = new LogosInventory.CustomButton();
-            this.customButton1 = new LogosInventory.CustomButton();
             this.MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AttendantMenuBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryMenuBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductMenuBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -62,6 +62,20 @@ namespace LogosInventory
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(800, 540);
             this.MainPanel.TabIndex = 2;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(12, 12);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(46, 43);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 3;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // label3
             // 
@@ -102,6 +116,7 @@ namespace LogosInventory
             // AttendantMenuBtn
             // 
             this.AttendantMenuBtn.BackColor = System.Drawing.Color.Gold;
+            this.AttendantMenuBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AttendantMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.Image")));
             this.AttendantMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.ImageHover")));
             this.AttendantMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.ImageNormal")));
@@ -116,6 +131,7 @@ namespace LogosInventory
             // CategoryMenuBtn
             // 
             this.CategoryMenuBtn.BackColor = System.Drawing.Color.Gold;
+            this.CategoryMenuBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CategoryMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.Image")));
             this.CategoryMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.ImageHover")));
             this.CategoryMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.ImageNormal")));
@@ -130,6 +146,7 @@ namespace LogosInventory
             // ProductMenuBtn
             // 
             this.ProductMenuBtn.BackColor = System.Drawing.Color.Gold;
+            this.ProductMenuBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProductMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.Image")));
             this.ProductMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageHover")));
             this.ProductMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageNormal")));
@@ -140,20 +157,6 @@ namespace LogosInventory
             this.ProductMenuBtn.TabIndex = 0;
             this.ProductMenuBtn.TabStop = false;
             this.ProductMenuBtn.Click += new System.EventHandler(this.ProductMenuBtn_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Gold;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = null;
-            this.customButton1.ImageNormal = null;
-            this.customButton1.Location = new System.Drawing.Point(12, 12);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(46, 43);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 3;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // Menu
             // 
@@ -167,10 +170,10 @@ namespace LogosInventory
             this.Load += new System.EventHandler(this.Menu_Load);
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AttendantMenuBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryMenuBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductMenuBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
             this.ResumeLayout(false);
 
         }

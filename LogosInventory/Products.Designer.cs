@@ -34,6 +34,13 @@ namespace LogosInventory
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.AddProductBtn = new LogosInventory.CustomButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.customButton1 = new LogosInventory.CustomButton();
             this.ProductTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,19 +50,10 @@ namespace LogosInventory
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.AddProductBtn = new LogosInventory.CustomButton();
-            this.customButton1 = new LogosInventory.CustomButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -63,19 +61,113 @@ namespace LogosInventory
             this.MainPanel.BackColor = System.Drawing.Color.Transparent;
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.Controls.Add(this.AddProductBtn);
             this.MainPanel.Controls.Add(this.label6);
-            this.MainPanel.Controls.Add(this.panel1);
             this.MainPanel.Controls.Add(this.label5);
             this.MainPanel.Controls.Add(this.label7);
             this.MainPanel.Controls.Add(this.label2);
             this.MainPanel.Controls.Add(this.label4);
             this.MainPanel.Controls.Add(this.customButton1);
             this.MainPanel.Controls.Add(this.ProductTable);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1087, 527);
             this.MainPanel.TabIndex = 0;
+            // 
+            // AddProductBtn
+            // 
+            this.AddProductBtn.BackColor = System.Drawing.Color.Gold;
+            this.AddProductBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddProductBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.Image")));
+            this.AddProductBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageHover")));
+            this.AddProductBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageNormal")));
+            this.AddProductBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.InitialImage")));
+            this.AddProductBtn.Location = new System.Drawing.Point(0, 457);
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.Size = new System.Drawing.Size(377, 70);
+            this.AddProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AddProductBtn.TabIndex = 37;
+            this.AddProductBtn.TabStop = false;
+            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(7, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 37);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "L";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(142, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 37);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "I";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(179, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 31);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "NVENTORY";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Green;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(109, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 29);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Product Log";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(57, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 31);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "OGOS";
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.customButton1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(16, 19);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(29, 33);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 31;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // ProductTable
             // 
@@ -106,7 +198,8 @@ namespace LogosInventory
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ProductTable.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ProductTable.Location = new System.Drawing.Point(376, 0);
+            this.ProductTable.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ProductTable.Location = new System.Drawing.Point(377, 0);
             this.ProductTable.Name = "ProductTable";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -123,27 +216,25 @@ namespace LogosInventory
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Product ID";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 103;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Product Name";
+            this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 127;
+            this.Column2.Width = 74;
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Price";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 69;
             // 
             // Column4
             // 
@@ -156,10 +247,10 @@ namespace LogosInventory
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Expiry Date";
+            this.Column5.HeaderText = "ExpiryDate";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 109;
+            this.Column5.Width = 105;
             // 
             // Column6
             // 
@@ -189,105 +280,6 @@ namespace LogosInventory
             this.Column8.Name = "Column8";
             this.Column8.Width = 55;
             // 
-            // AddProductBtn
-            // 
-            this.AddProductBtn.BackColor = System.Drawing.Color.Transparent;
-            this.AddProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.Image")));
-            this.AddProductBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageHover")));
-            this.AddProductBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageNormal")));
-            this.AddProductBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.InitialImage")));
-            this.AddProductBtn.Location = new System.Drawing.Point(142, 11);
-            this.AddProductBtn.Name = "AddProductBtn";
-            this.AddProductBtn.Size = new System.Drawing.Size(74, 59);
-            this.AddProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AddProductBtn.TabIndex = 9;
-            this.AddProductBtn.TabStop = false;
-            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = null;
-            this.customButton1.ImageNormal = null;
-            this.customButton1.Location = new System.Drawing.Point(12, 12);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(29, 33);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 8;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Green;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(107, 254);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 29);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Product Log";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.AddProductBtn);
-            this.panel1.Location = new System.Drawing.Point(0, 454);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 73);
-            this.panel1.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Green;
-            this.label6.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 37);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "L";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Green;
-            this.label5.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(142, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 37);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "I";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Green;
-            this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(179, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 31);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "NVENTORY";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Green;
-            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(57, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 31);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "OGOS";
-            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,10 +291,9 @@ namespace LogosInventory
             this.Text = "Products";
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,8 +301,6 @@ namespace LogosInventory
         #endregion
 
         private System.Windows.Forms.Panel MainPanel;
-        private CustomButton AddProductBtn;
-        private CustomButton customButton1;
         private System.Windows.Forms.DataGridView ProductTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -321,11 +310,12 @@ namespace LogosInventory
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewImageColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private CustomButton AddProductBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private CustomButton customButton1;
     }
 }

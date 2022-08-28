@@ -50,7 +50,15 @@ namespace LogosInventory
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+
+            if (MessageBox.Show("Are you sure you want to Logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+            else
+            {
+                this.Dispose();
+            }
         }
 
         private void Menu_Load(object sender, EventArgs e)

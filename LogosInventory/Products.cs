@@ -86,6 +86,7 @@ namespace LogosInventory
                     Con.Close();
                     MessageBox.Show(this, "Product Deleted Successfully");
                 }
+                this.Dispose();
             }
             ShowProduct();
 
@@ -99,6 +100,26 @@ namespace LogosInventory
         private void AddProductBtn_Click(object sender, EventArgs e)
         {
             OpenNewForm(new AddProduct());
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddProductBtn_Click_1(object sender, EventArgs e)
+        {
+            OpenNewForm(new AddProduct());
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -38,10 +38,10 @@ namespace LogosInventory
             this.Password = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +110,10 @@ namespace LogosInventory
             // LoginBtn
             // 
             this.LoginBtn.BackColor = System.Drawing.Color.Gold;
+            this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LoginBtn.FlatAppearance.BorderSize = 6;
+            this.LoginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.LoginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Black;
             this.LoginBtn.Location = new System.Drawing.Point(261, 328);
@@ -143,17 +147,17 @@ namespace LogosInventory
             this.MainPanel.Size = new System.Drawing.Size(640, 450);
             this.MainPanel.TabIndex = 0;
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Green;
-            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(150, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 39);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "OGOS";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Font = new System.Drawing.Font("Wide Latin", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(70, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 59);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "L";
             // 
             // label5
             // 
@@ -167,18 +171,6 @@ namespace LogosInventory
             this.label5.TabIndex = 12;
             this.label5.Text = "I";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Green;
-            this.label6.Font = new System.Drawing.Font("Wide Latin", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(70, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 59);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "L";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -190,6 +182,18 @@ namespace LogosInventory
             this.label7.Size = new System.Drawing.Size(231, 39);
             this.label7.TabIndex = 12;
             this.label7.Text = "NVENTORY";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(150, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 39);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "OGOS";
             // 
             // Login
             // 

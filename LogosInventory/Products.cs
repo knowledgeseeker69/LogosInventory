@@ -35,7 +35,6 @@ namespace LogosInventory
             NewForm.BringToFront();
             NewForm.Show();
 
-
         }
 
 
@@ -66,7 +65,7 @@ namespace LogosInventory
             if (colName == "Edit")
             {
                 AddProduct AddProductForm = new AddProduct();
-                
+
                 AddProductForm.ProductName.Text = ProductTable.Rows[e.RowIndex].Cells[1].Value.ToString();
                 AddProductForm.Price.Text = ProductTable.Rows[e.RowIndex].Cells[2].Value.ToString();
                 AddProductForm.Quantity.Text = ProductTable.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -89,37 +88,14 @@ namespace LogosInventory
                 this.Dispose();
             }
             ShowProduct();
-
         }
 
-        private void customButton1_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void AddProductBtn_Click(object sender, EventArgs e)
-        {
-            OpenNewForm(new AddProduct());
-        }
-
-        private void customButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SubPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void AddProductBtn_Click_1(object sender, EventArgs e)
         {
-            OpenNewForm(new AddProduct());
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
+            AddProduct addform = new AddProduct();
+            addform.Show();
+            Visible = false;
         }
     }
 }

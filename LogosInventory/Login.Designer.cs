@@ -51,7 +51,7 @@ namespace LogosInventory
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(224, 127);
+            this.label1.Location = new System.Drawing.Point(225, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 5;
@@ -144,7 +144,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(640, 450);
+            this.MainPanel.Size = new System.Drawing.Size(685, 450);
             this.MainPanel.TabIndex = 0;
             // 
             // label6
@@ -153,7 +153,7 @@ namespace LogosInventory
             this.label6.BackColor = System.Drawing.Color.Green;
             this.label6.Font = new System.Drawing.Font("Wide Latin", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(70, 47);
+            this.label6.Location = new System.Drawing.Point(86, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 59);
             this.label6.TabIndex = 12;
@@ -165,7 +165,7 @@ namespace LogosInventory
             this.label5.BackColor = System.Drawing.Color.Green;
             this.label5.Font = new System.Drawing.Font("Wide Latin", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(251, 47);
+            this.label5.Location = new System.Drawing.Point(276, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 59);
             this.label5.TabIndex = 12;
@@ -177,7 +177,7 @@ namespace LogosInventory
             this.label7.BackColor = System.Drawing.Color.Green;
             this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(311, 67);
+            this.label7.Location = new System.Drawing.Point(341, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(231, 39);
             this.label7.TabIndex = 12;
@@ -189,7 +189,7 @@ namespace LogosInventory
             this.label4.BackColor = System.Drawing.Color.Green;
             this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(150, 67);
+            this.label4.Location = new System.Drawing.Point(170, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 39);
             this.label4.TabIndex = 12;
@@ -199,7 +199,7 @@ namespace LogosInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 450);
+            this.ClientSize = new System.Drawing.Size(685, 450);
             this.Controls.Add(this.MainPanel);
             this.Name = "Login";
             this.Text = "Form1";

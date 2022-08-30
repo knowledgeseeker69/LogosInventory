@@ -34,13 +34,6 @@ namespace LogosInventory
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.AddProductBtn = new LogosInventory.CustomButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.customButton1 = new LogosInventory.CustomButton();
             this.ProductTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,124 +43,36 @@ namespace LogosInventory
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.AddProductBtn = new LogosInventory.CustomButton();
+            this.customButton1 = new LogosInventory.CustomButton();
             this.MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
             // 
-            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainPanel.Controls.Add(this.AddProductBtn);
+            this.MainPanel.Controls.Add(this.customButton1);
             this.MainPanel.Controls.Add(this.label6);
             this.MainPanel.Controls.Add(this.label5);
+            this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.label7);
-            this.MainPanel.Controls.Add(this.label2);
             this.MainPanel.Controls.Add(this.label4);
-            this.MainPanel.Controls.Add(this.customButton1);
             this.MainPanel.Controls.Add(this.ProductTable);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1087, 527);
             this.MainPanel.TabIndex = 0;
-            // 
-            // AddProductBtn
-            // 
-            this.AddProductBtn.BackColor = System.Drawing.Color.Gold;
-            this.AddProductBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddProductBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AddProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.Image")));
-            this.AddProductBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageHover")));
-            this.AddProductBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageNormal")));
-            this.AddProductBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.InitialImage")));
-            this.AddProductBtn.Location = new System.Drawing.Point(0, 457);
-            this.AddProductBtn.Name = "AddProductBtn";
-            this.AddProductBtn.Size = new System.Drawing.Size(377, 70);
-            this.AddProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AddProductBtn.TabIndex = 37;
-            this.AddProductBtn.TabStop = false;
-            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click_1);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Green;
-            this.label6.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 37);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "L";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Green;
-            this.label5.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(142, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 37);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "I";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Green;
-            this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(179, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 31);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "NVENTORY";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Green;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(109, 261);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 29);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Product Log";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Green;
-            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(57, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 31);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "OGOS";
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Gold;
-            this.customButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.customButton1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
-            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(16, 19);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(29, 33);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 31;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // ProductTable
             // 
@@ -212,7 +117,7 @@ namespace LogosInventory
             this.ProductTable.RowHeadersWidth = 51;
             this.ProductTable.RowTemplate.Height = 24;
             this.ProductTable.Size = new System.Drawing.Size(710, 527);
-            this.ProductTable.TabIndex = 6;
+            this.ProductTable.TabIndex = 39;
             // 
             // Column1
             // 
@@ -280,6 +185,95 @@ namespace LogosInventory
             this.Column8.Name = "Column8";
             this.Column8.Width = 55;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Font = new System.Drawing.Font("Wide Latin", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 41);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "L";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.Font = new System.Drawing.Font("Wide Latin", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(143, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 41);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "I";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(95, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 31);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Product Table";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(186, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 31);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "NVENTORY";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(58, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 31);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "OGOS";
+            // 
+            // AddProductBtn
+            // 
+            this.AddProductBtn.BackColor = System.Drawing.Color.Gold;
+            this.AddProductBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddProductBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.Image")));
+            this.AddProductBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageHover")));
+            this.AddProductBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProductBtn.ImageNormal")));
+            this.AddProductBtn.Location = new System.Drawing.Point(0, 477);
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.Size = new System.Drawing.Size(377, 50);
+            this.AddProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AddProductBtn.TabIndex = 59;
+            this.AddProductBtn.TabStop = false;
+            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click_1);
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(10, 3);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(41, 38);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 58;
+            this.customButton1.TabStop = false;
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,9 +285,9 @@ namespace LogosInventory
             this.Text = "Products";
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,11 +305,11 @@ namespace LogosInventory
         private System.Windows.Forms.DataGridViewImageColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
         private CustomButton AddProductBtn;
+        private CustomButton customButton1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private CustomButton customButton1;
     }
 }

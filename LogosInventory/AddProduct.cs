@@ -111,10 +111,6 @@ namespace LogosInventory
 
         }
 
-        private void AddProduct_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void CategoryCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -149,6 +145,78 @@ namespace LogosInventory
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void CancelBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+
+
+        private void UpdateBtn_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CategoryCombo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpiryDate_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewCatBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Price_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Quantity_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveBtn_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

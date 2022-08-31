@@ -31,6 +31,8 @@ namespace LogosInventory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.CategoryCombo = new System.Windows.Forms.ComboBox();
@@ -45,8 +47,7 @@ namespace LogosInventory
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LabelPID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,12 +69,33 @@ namespace LogosInventory
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.LabelPID);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 590);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(192, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Calligraphy", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(165, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 36);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Add Product";
             // 
             // CancelBtn
             // 
@@ -99,7 +121,7 @@ namespace LogosInventory
             this.UpdateBtn.TabIndex = 22;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_2);
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // CategoryCombo
             // 
@@ -108,7 +130,6 @@ namespace LogosInventory
             this.CategoryCombo.Name = "CategoryCombo";
             this.CategoryCombo.Size = new System.Drawing.Size(225, 24);
             this.CategoryCombo.TabIndex = 21;
-            this.CategoryCombo.SelectedIndexChanged += new System.EventHandler(this.CategoryCombo_SelectedIndexChanged_1);
             // 
             // ExpiryDate
             // 
@@ -116,7 +137,6 @@ namespace LogosInventory
             this.ExpiryDate.Name = "ExpiryDate";
             this.ExpiryDate.Size = new System.Drawing.Size(225, 22);
             this.ExpiryDate.TabIndex = 20;
-            this.ExpiryDate.ValueChanged += new System.EventHandler(this.ExpiryDate_ValueChanged_1);
             // 
             // NewCatBtn
             // 
@@ -127,7 +147,6 @@ namespace LogosInventory
             this.NewCatBtn.TabIndex = 18;
             this.NewCatBtn.Text = "New";
             this.NewCatBtn.UseVisualStyleBackColor = true;
-            this.NewCatBtn.Click += new System.EventHandler(this.NewCatBtn_Click);
             // 
             // SaveBtn
             // 
@@ -140,7 +159,7 @@ namespace LogosInventory
             this.SaveBtn.TabIndex = 19;
             this.SaveBtn.Text = "Add";
             this.SaveBtn.UseVisualStyleBackColor = false;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click_1);
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // Quantity
             // 
@@ -148,7 +167,6 @@ namespace LogosInventory
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(225, 22);
             this.Quantity.TabIndex = 15;
-            this.Quantity.TextChanged += new System.EventHandler(this.Quantity_TextChanged_1);
             // 
             // Price
             // 
@@ -156,7 +174,6 @@ namespace LogosInventory
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(225, 22);
             this.Price.TabIndex = 16;
-            this.Price.TextChanged += new System.EventHandler(this.Price_TextChanged_1);
             // 
             // ProductName
             // 
@@ -164,7 +181,6 @@ namespace LogosInventory
             this.ProductName.Name = "ProductName";
             this.ProductName.Size = new System.Drawing.Size(225, 22);
             this.ProductName.TabIndex = 17;
-            this.ProductName.TextChanged += new System.EventHandler(this.ProductName_TextChanged_1);
             // 
             // label6
             // 
@@ -175,7 +191,6 @@ namespace LogosInventory
             this.label6.Size = new System.Drawing.Size(99, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Expiry Date";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -186,7 +201,6 @@ namespace LogosInventory
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 11;
             this.label4.Text = "Quantity";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -197,7 +211,6 @@ namespace LogosInventory
             this.label3.Size = new System.Drawing.Size(48, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Price";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -208,7 +221,6 @@ namespace LogosInventory
             this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 13;
             this.label2.Text = "Category";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -219,27 +231,16 @@ namespace LogosInventory
             this.label1.Size = new System.Drawing.Size(125, 22);
             this.label1.TabIndex = 14;
             this.label1.Text = "Product Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label5
+            // LabelPID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Calligraphy", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(165, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 36);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Add Product";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(192, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.LabelPID.AutoSize = true;
+            this.LabelPID.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPID.Location = new System.Drawing.Point(26, 240);
+            this.LabelPID.Name = "LabelPID";
+            this.LabelPID.Size = new System.Drawing.Size(125, 22);
+            this.LabelPID.TabIndex = 14;
+            this.LabelPID.Text = "Product Name";
             // 
             // AddProduct
             // 
@@ -260,7 +261,6 @@ namespace LogosInventory
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button CancelBtn;
         public System.Windows.Forms.Button UpdateBtn;
         public System.Windows.Forms.ComboBox CategoryCombo;
         public System.Windows.Forms.DateTimePicker ExpiryDate;
@@ -276,5 +276,7 @@ namespace LogosInventory
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.Label LabelPID;
     }
 }

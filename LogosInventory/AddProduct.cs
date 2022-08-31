@@ -35,9 +35,16 @@ namespace LogosInventory
             dr.Close();
             Con.Close();
         }
+
+
+        private void CancelBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+   
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if(ProductName.Text == "" || Quantity.Text == "" || Price.Text == "" || CategoryCombo.SelectedIndex == -1)
+            if (ProductName.Text == "" || Quantity.Text == "" || Price.Text == "" || CategoryCombo.SelectedIndex == -1)
             {
                 MessageBox.Show(this, "Please fill all required fields");
             }
@@ -63,18 +70,10 @@ namespace LogosInventory
                     MessageBox.Show(Ex.Message);
                 }
             }
-        }
-
-        public void Clear()
-        {
-            ProductName.Clear();
-            Price.Clear();
-            Quantity.Clear();
-            CategoryCombo.Text = "";
 
         }
 
-        private void Updatebtn_Click(object sender, EventArgs e)
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
             if (ProductName.Text == "" || Quantity.Text == "" || Price.Text == "" || CategoryCombo.SelectedIndex == -1)
             {
@@ -84,138 +83,28 @@ namespace LogosInventory
             {
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("update Product set ProductName=@ProductName, Price=@Price, ProductQty=@ProductQty, ExpiryDate=@ExpiryDate, ProductCategory=@ProductCategory where ProductName like'"+ProductName.Text+"'", Con);
-                    cmd.Parameters.AddWithValue("@ProductName", ProductName.Text);
-                    cmd.Parameters.AddWithValue("@Price", Convert.ToInt32(Price.Text));
-                    cmd.Parameters.AddWithValue("@ProductQty", Convert.ToInt32(Quantity.Text));
-                    cmd.Parameters.AddWithValue("@ExpiryDate", ExpiryDate.Value.Date);
-                    cmd.Parameters.AddWithValue("@ProductCategory", CategoryCombo.Text);
+                    if (MessageBox.Show("Are you sure you want to edit this product?", "Edit Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("update Product set ProductName=@ProductName, Price=@Price, ProductQty=@ProductQty, ExpiryDate=@ExpiryDate, ProductCategory=@ProductCategory where ProductID like'" + ProductName.Text + "'", Con);
+                        cmd.Parameters.AddWithValue("@ProductName", ProductName.Text);
+                        cmd.Parameters.AddWithValue("@Price", Convert.ToInt32(Price.Text));
+                        cmd.Parameters.AddWithValue("@ProductQty", Convert.ToInt32(Quantity.Text));
+                        cmd.Parameters.AddWithValue("@ExpiryDate", ExpiryDate.Value.Date);
+                        cmd.Parameters.AddWithValue("@ProductCategory", CategoryCombo.Text);
 
-                    cmd.ExecuteNonQuery();
-                    Con.Close();
-                    MessageBox.Show(this, "Product Updated!");
-                    Clear();
-                    this.Dispose();
+                        cmd.ExecuteNonQuery();
+                        Con.Close();
+                        MessageBox.Show(this, "Product Updated!");
+                        this.Dispose();
+                    }
                 }
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
                 }
+
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void CategoryCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Price_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Quantity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProductName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExpiryDate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UpdateBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void CancelBtn_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-
-
-        private void UpdateBtn_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CategoryCombo_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExpiryDate_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NewCatBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Price_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Quantity_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProductName_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaveBtn_Click_1(object sender, EventArgs e)
-        {
 
         }
     }

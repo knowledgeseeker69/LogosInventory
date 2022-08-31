@@ -60,7 +60,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(800, 540);
+            this.MainPanel.Size = new System.Drawing.Size(800, 478);
             this.MainPanel.TabIndex = 2;
             // 
             // customButton1
@@ -149,7 +149,7 @@ namespace LogosInventory
             this.ProductMenuBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProductMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.Image")));
             this.ProductMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageHover")));
-            this.ProductMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageNormal")));
+            this.ProductMenuBtn.ImageNormal = null;
             this.ProductMenuBtn.Location = new System.Drawing.Point(92, 147);
             this.ProductMenuBtn.Name = "ProductMenuBtn";
             this.ProductMenuBtn.Size = new System.Drawing.Size(167, 150);
@@ -163,7 +163,7 @@ namespace LogosInventory
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(800, 478);
             this.Controls.Add(this.MainPanel);
             this.Name = "Menu";
             this.Text = "tool";

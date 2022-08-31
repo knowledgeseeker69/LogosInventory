@@ -52,5 +52,7 @@ namespace LogosInventory
         {
             OpenNewForm(new Menu());
         }
+
+
     }
 }

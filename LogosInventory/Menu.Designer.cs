@@ -60,7 +60,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(800, 478);
+            this.MainPanel.Size = new System.Drawing.Size(1132, 501);
             this.MainPanel.TabIndex = 2;
             // 
             // customButton1
@@ -69,9 +69,9 @@ namespace LogosInventory
             this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
             this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
             this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(12, 12);
+            this.customButton1.Location = new System.Drawing.Point(0, 0);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(46, 43);
+            this.customButton1.Size = new System.Drawing.Size(40, 40);
             this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customButton1.TabIndex = 3;
             this.customButton1.TabStop = false;
@@ -83,7 +83,7 @@ namespace LogosInventory
             this.label3.BackColor = System.Drawing.Color.Green;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(591, 300);
+            this.label3.Location = new System.Drawing.Point(856, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 2;
@@ -95,7 +95,7 @@ namespace LogosInventory
             this.label2.BackColor = System.Drawing.Color.Green;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(358, 300);
+            this.label2.Location = new System.Drawing.Point(508, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 2;
@@ -107,7 +107,7 @@ namespace LogosInventory
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(132, 300);
+            this.label1.Location = new System.Drawing.Point(161, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 2;
@@ -120,9 +120,9 @@ namespace LogosInventory
             this.AttendantMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.Image")));
             this.AttendantMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.ImageHover")));
             this.AttendantMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AttendantMenuBtn.ImageNormal")));
-            this.AttendantMenuBtn.Location = new System.Drawing.Point(560, 147);
+            this.AttendantMenuBtn.Location = new System.Drawing.Point(805, 118);
             this.AttendantMenuBtn.Name = "AttendantMenuBtn";
-            this.AttendantMenuBtn.Size = new System.Drawing.Size(167, 150);
+            this.AttendantMenuBtn.Size = new System.Drawing.Size(200, 200);
             this.AttendantMenuBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AttendantMenuBtn.TabIndex = 0;
             this.AttendantMenuBtn.TabStop = false;
@@ -135,9 +135,9 @@ namespace LogosInventory
             this.CategoryMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.Image")));
             this.CategoryMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.ImageHover")));
             this.CategoryMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("CategoryMenuBtn.ImageNormal")));
-            this.CategoryMenuBtn.Location = new System.Drawing.Point(327, 147);
+            this.CategoryMenuBtn.Location = new System.Drawing.Point(461, 118);
             this.CategoryMenuBtn.Name = "CategoryMenuBtn";
-            this.CategoryMenuBtn.Size = new System.Drawing.Size(167, 150);
+            this.CategoryMenuBtn.Size = new System.Drawing.Size(200, 200);
             this.CategoryMenuBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CategoryMenuBtn.TabIndex = 0;
             this.CategoryMenuBtn.TabStop = false;
@@ -149,10 +149,10 @@ namespace LogosInventory
             this.ProductMenuBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProductMenuBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.Image")));
             this.ProductMenuBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageHover")));
-            this.ProductMenuBtn.ImageNormal = null;
-            this.ProductMenuBtn.Location = new System.Drawing.Point(92, 147);
+            this.ProductMenuBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("ProductMenuBtn.ImageNormal")));
+            this.ProductMenuBtn.Location = new System.Drawing.Point(117, 118);
             this.ProductMenuBtn.Name = "ProductMenuBtn";
-            this.ProductMenuBtn.Size = new System.Drawing.Size(167, 150);
+            this.ProductMenuBtn.Size = new System.Drawing.Size(200, 200);
             this.ProductMenuBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ProductMenuBtn.TabIndex = 0;
             this.ProductMenuBtn.TabStop = false;
@@ -163,7 +163,7 @@ namespace LogosInventory
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 478);
+            this.ClientSize = new System.Drawing.Size(1132, 501);
             this.Controls.Add(this.MainPanel);
             this.Name = "Menu";
             this.Text = "tool";

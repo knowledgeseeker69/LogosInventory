@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttendantForm.cs">
+    <Compile Include="AddAttendant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttendantForm.Designer.cs">
-      <DependentUpon>AttendantForm.cs</DependentUpon>
+    <Compile Include="AddAttendant.Designer.cs">
+      <DependentUpon>AddAttendant.cs</DependentUpon>
     </Compile>
     <Compile Include="Attendants.cs">
       <SubType>Form</SubType>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CategoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CategoryForm.Designer.cs">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
@@ -102,20 +102,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AttendantForm.resx">
-      <DependentUpon>AttendantForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddAttendant.resx">
+      <DependentUpon>AddAttendant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Attendants.resx">
       <DependentUpon>Attendants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CategoryForm.resx">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>

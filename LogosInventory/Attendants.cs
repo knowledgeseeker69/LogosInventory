@@ -15,7 +15,7 @@ namespace LogosInventory
     {
             
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand cm = new SqlCommand();
+        SqlCommand Com = new SqlCommand();
         SqlDataReader dr;
         public Attendants()
         {
@@ -25,17 +25,63 @@ namespace LogosInventory
         public void LoadAttendant()
         {
             AttendantTable.Rows.Clear();
-            cm = new SqlCommand("select * from Attendant", Con);
+            Com = new SqlCommand("select * from Attendant", Con);
             Con.Open();
-            dr = cm.ExecuteReader();
+            dr = Com.ExecuteReader();
             while (dr.Read())
             {
-                AttendantTable.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[5].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString());
+                AttendantTable.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString());
             }
             dr.Close();
             Con.Close();
 
         }
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void AttendantTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nameColumn = AttendantTable.Columns[e.ColumnIndex].Name;
+            if(nameColumn == "Edit")
+            {
+                AddAttendant newAddAttendant = new AddAttendant();
+                newAddAttendant.Username.Text = AttendantTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                newAddAttendant.Surname.Text = AttendantTable.Rows[e.RowIndex].Cells[2].Value.ToString();
+                newAddAttendant.OtherNames.Text = AttendantTable.Rows[e.RowIndex].Cells[3].Value.ToString();
+                newAddAttendant.Email.Text = AttendantTable.Rows[e.RowIndex].Cells[4].Value.ToString();
+                newAddAttendant.Phone.Text = AttendantTable.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+                newAddAttendant.SaveBtn.Enabled = false;
+                newAddAttendant.UpdateBtn.Enabled = true;
+                newAddAttendant.Username.Enabled = false;
+
+
+                newAddAttendant.ShowDialog();
+            }
+            else if(nameColumn == "Delete")
+            {
+                if(MessageBox.Show("Are you sure you want to delete this attendant?", "Delete Attendant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Con.Open();
+                    Com = new SqlCommand("delete from Attendant where Username like'" + AttendantTable.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", Con);
+                    Com.ExecuteNonQuery();
+                    Con.Close();
+                    MessageBox.Show("Attendant Deleted!");
+                }
+            }
+            LoadAttendant();
+        }
+
+        private void AddAttBtn_Click(object sender, EventArgs e)
+        {
+            AddAttendant NewAddAtt = new AddAttendant();
+            NewAddAtt.SaveBtn.Enabled = true;
+            NewAddAtt.UpdateBtn.Enabled = false;
+            NewAddAtt.ShowDialog();
+            LoadAttendant();
+        }
     }
 }

@@ -55,10 +55,6 @@ namespace LogosInventory
             {
                 this.Dispose();
             }
-            else
-            {
-                this.Dispose();
-            }
         }
 
         private void Menu_Load(object sender, EventArgs e)

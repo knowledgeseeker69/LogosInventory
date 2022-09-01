@@ -30,7 +30,7 @@ namespace LogosInventory
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.CancelBtn = new System.Windows.Forms.Button();
@@ -47,35 +47,33 @@ namespace LogosInventory
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.LabelPID = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.CancelBtn);
-            this.panel1.Controls.Add(this.UpdateBtn);
-            this.panel1.Controls.Add(this.CategoryCombo);
-            this.panel1.Controls.Add(this.ExpiryDate);
-            this.panel1.Controls.Add(this.NewCatBtn);
-            this.panel1.Controls.Add(this.SaveBtn);
-            this.panel1.Controls.Add(this.Quantity);
-            this.panel1.Controls.Add(this.Price);
-            this.panel1.Controls.Add(this.ProductName);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.LabelPID);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 590);
-            this.panel1.TabIndex = 0;
+            this.MainPanel.Controls.Add(this.pictureBox1);
+            this.MainPanel.Controls.Add(this.label5);
+            this.MainPanel.Controls.Add(this.CancelBtn);
+            this.MainPanel.Controls.Add(this.UpdateBtn);
+            this.MainPanel.Controls.Add(this.CategoryCombo);
+            this.MainPanel.Controls.Add(this.ExpiryDate);
+            this.MainPanel.Controls.Add(this.NewCatBtn);
+            this.MainPanel.Controls.Add(this.SaveBtn);
+            this.MainPanel.Controls.Add(this.Quantity);
+            this.MainPanel.Controls.Add(this.Price);
+            this.MainPanel.Controls.Add(this.ProductName);
+            this.MainPanel.Controls.Add(this.label6);
+            this.MainPanel.Controls.Add(this.label4);
+            this.MainPanel.Controls.Add(this.label3);
+            this.MainPanel.Controls.Add(this.label2);
+            this.MainPanel.Controls.Add(this.label1);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(540, 590);
+            this.MainPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -232,27 +230,17 @@ namespace LogosInventory
             this.label1.TabIndex = 14;
             this.label1.Text = "Product Name";
             // 
-            // LabelPID
-            // 
-            this.LabelPID.AutoSize = true;
-            this.LabelPID.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPID.Location = new System.Drawing.Point(26, 240);
-            this.LabelPID.Name = "LabelPID";
-            this.LabelPID.Size = new System.Drawing.Size(125, 22);
-            this.LabelPID.TabIndex = 14;
-            this.LabelPID.Text = "Product Name";
-            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 590);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanel);
             this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddProduct";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -260,7 +248,7 @@ namespace LogosInventory
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MainPanel;
         public System.Windows.Forms.Button UpdateBtn;
         public System.Windows.Forms.ComboBox CategoryCombo;
         public System.Windows.Forms.DateTimePicker ExpiryDate;
@@ -277,6 +265,5 @@ namespace LogosInventory
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button CancelBtn;
-        private System.Windows.Forms.Label LabelPID;
     }
 }

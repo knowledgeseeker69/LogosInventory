@@ -16,7 +16,7 @@ namespace LogosInventory
     public partial class AddAttendant : Form
     {
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand cm = new SqlCommand();
+        SqlCommand cmd = new SqlCommand();
 
         public AddAttendant()
         {
@@ -36,7 +36,7 @@ namespace LogosInventory
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into Attendant values(@Username, @Surname, @OtherName, @Email, @Phone)", Con);
+                     cmd = new SqlCommand("insert into Attendant values(@Username, @Surname, @OtherName, @Email, @Phone)", Con);
                     cmd.Parameters.AddWithValue("@Username", Username.Text);
                     cmd.Parameters.AddWithValue("@Surname", Surname.Text);
                     cmd.Parameters.AddWithValue("@OtherName", OtherNames.Text);
@@ -71,18 +71,22 @@ namespace LogosInventory
             {
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("update Attendant set Username=@Username, Surname=@Surname, OtherName=@OtherName, Email=@Email, Phone=@Phone where username like '"+ Username.Text +"'", Con);
-                    cmd.Parameters.AddWithValue("@Username", Username.Text);
-                    cmd.Parameters.AddWithValue("@Surname", Surname.Text);
-                    cmd.Parameters.AddWithValue("@OtherName", OtherNames.Text);
-                    cmd.Parameters.AddWithValue("@Email", Email.Text);
-                    cmd.Parameters.AddWithValue("@Phone", Phone.Text);
+                    if (MessageBox.Show("Are you sure you want to edit this attendant?", "Edit Attendant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Con.Open();
+                        cmd = new SqlCommand("update Attendant set Username=@Username, Surname=@Surname, OtherName=@OtherName, Email=@Email, Phone=@Phone where Username like '" + Username.Text + "'", Con);
+                        cmd.Parameters.AddWithValue("@Username", Username.Text);
+                        cmd.Parameters.AddWithValue("@Surname", Surname.Text);
+                        cmd.Parameters.AddWithValue("@OtherName", OtherNames.Text);
+                        cmd.Parameters.AddWithValue("@Email", Email.Text);
+                        cmd.Parameters.AddWithValue("@Phone", Phone.Text);
 
-                    cmd.ExecuteNonQuery();
-                    Con.Close();
-                    MessageBox.Show(this, "Attendant Data Updated!");
-                    this.Dispose();
+                        cmd.ExecuteNonQuery();
+                        Con.Close();
+                        MessageBox.Show(this, "Attendant Data Updated!");
+                        this.Dispose();
+
+                    }
                 }
                 catch (Exception Ex)
                 {

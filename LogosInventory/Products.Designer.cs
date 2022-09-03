@@ -31,15 +31,13 @@ namespace LogosInventory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.ProductTable = new System.Windows.Forms.DataGridView();
             this.SubPanel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.customButton1 = new LogosInventory.CustomButton();
-            this.AddProdBtn = new LogosInventory.CustomButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProductTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +46,13 @@ namespace LogosInventory
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.customButton1 = new LogosInventory.CustomButton();
+            this.AddProdBtn = new LogosInventory.CustomButton();
             this.MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             this.SubPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProdBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -65,8 +65,29 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1082, 501);
+            this.MainPanel.Size = new System.Drawing.Size(1282, 501);
             this.MainPanel.TabIndex = 1;
+            // 
+            // ProductTable
+            // 
+            this.ProductTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Edit,
+            this.Delete});
+            this.ProductTable.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ProductTable.Location = new System.Drawing.Point(424, 0);
+            this.ProductTable.Name = "ProductTable";
+            this.ProductTable.RowHeadersWidth = 51;
+            this.ProductTable.RowTemplate.Height = 24;
+            this.ProductTable.Size = new System.Drawing.Size(858, 501);
+            this.ProductTable.TabIndex = 1;
+            this.ProductTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductTable_CellContentClick);
             // 
             // SubPanel
             // 
@@ -108,36 +129,6 @@ namespace LogosInventory
             this.label4.TabIndex = 22;
             this.label4.Text = "OGOS";
             // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Gold;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
-            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(0, 0);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(30, 30);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 43;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // AddProdBtn
-            // 
-            this.AddProdBtn.BackColor = System.Drawing.Color.Gold;
-            this.AddProdBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddProdBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AddProdBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.Image")));
-            this.AddProdBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.ImageHover")));
-            this.AddProdBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.ImageNormal")));
-            this.AddProdBtn.Location = new System.Drawing.Point(0, 451);
-            this.AddProdBtn.Name = "AddProdBtn";
-            this.AddProdBtn.Size = new System.Drawing.Size(427, 50);
-            this.AddProdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AddProdBtn.TabIndex = 23;
-            this.AddProdBtn.TabStop = false;
-            this.AddProdBtn.Click += new System.EventHandler(this.AddProdBtn_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -174,33 +165,12 @@ namespace LogosInventory
             this.label1.TabIndex = 20;
             this.label1.Text = "Products Table";
             // 
-            // ProductTable
-            // 
-            this.ProductTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Edit,
-            this.Delete});
-            this.ProductTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductTable.Location = new System.Drawing.Point(378, 0);
-            this.ProductTable.Name = "ProductTable";
-            this.ProductTable.RowHeadersWidth = 51;
-            this.ProductTable.RowTemplate.Height = 24;
-            this.ProductTable.Size = new System.Drawing.Size(704, 501);
-            this.ProductTable.TabIndex = 1;
-            // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Product ID";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 103;
             // 
             // Column2
             // 
@@ -237,10 +207,10 @@ namespace LogosInventory
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Expiry Date";
+            this.Column6.HeaderText = "Expiry";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 109;
+            this.Column6.Width = 75;
             // 
             // Edit
             // 
@@ -262,21 +232,52 @@ namespace LogosInventory
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(0, 0);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(30, 30);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 43;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
+            // AddProdBtn
+            // 
+            this.AddProdBtn.BackColor = System.Drawing.Color.Gold;
+            this.AddProdBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddProdBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddProdBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.Image")));
+            this.AddProdBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.ImageHover")));
+            this.AddProdBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddProdBtn.ImageNormal")));
+            this.AddProdBtn.Location = new System.Drawing.Point(0, 451);
+            this.AddProdBtn.Name = "AddProdBtn";
+            this.AddProdBtn.Size = new System.Drawing.Size(427, 50);
+            this.AddProdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AddProdBtn.TabIndex = 23;
+            this.AddProdBtn.TabStop = false;
+            this.AddProdBtn.Click += new System.EventHandler(this.AddProdBtn_Click);
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1082, 501);
+            this.ClientSize = new System.Drawing.Size(1282, 501);
             this.Controls.Add(this.MainPanel);
             this.Name = "Products";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products";
             this.MainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             this.SubPanel.ResumeLayout(false);
             this.SubPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProdBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).EndInit();
             this.ResumeLayout(false);
 
         }

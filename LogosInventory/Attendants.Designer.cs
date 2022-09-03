@@ -34,12 +34,12 @@ namespace LogosInventory
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.customButton1 = new LogosInventory.CustomButton();
+            this.AddAttBtn = new LogosInventory.CustomButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AttendantTable = new System.Windows.Forms.DataGridView();
-            this.customButton1 = new LogosInventory.CustomButton();
-            this.AddAttBtn = new LogosInventory.CustomButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +50,9 @@ namespace LogosInventory
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.MainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddAttBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -63,7 +63,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1132, 501);
+            this.MainPanel.Size = new System.Drawing.Size(1282, 501);
             this.MainPanel.TabIndex = 0;
             // 
             // panel1
@@ -107,6 +107,36 @@ namespace LogosInventory
             this.label4.Size = new System.Drawing.Size(80, 28);
             this.label4.TabIndex = 40;
             this.label4.Text = "OGOS";
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(0, 0);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(30, 30);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 42;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
+            // AddAttBtn
+            // 
+            this.AddAttBtn.BackColor = System.Drawing.Color.Gold;
+            this.AddAttBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddAttBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddAttBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.Image")));
+            this.AddAttBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.ImageHover")));
+            this.AddAttBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.ImageNormal")));
+            this.AddAttBtn.Location = new System.Drawing.Point(0, 451);
+            this.AddAttBtn.Name = "AddAttBtn";
+            this.AddAttBtn.Size = new System.Drawing.Size(380, 50);
+            this.AddAttBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AddAttBtn.TabIndex = 41;
+            this.AddAttBtn.TabStop = false;
+            this.AddAttBtn.Click += new System.EventHandler(this.AddAttBtn_Click);
             // 
             // label6
             // 
@@ -157,43 +187,13 @@ namespace LogosInventory
             this.Edit,
             this.Delete});
             this.AttendantTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AttendantTable.Location = new System.Drawing.Point(380, 0);
+            this.AttendantTable.Location = new System.Drawing.Point(372, 0);
             this.AttendantTable.Name = "AttendantTable";
             this.AttendantTable.RowHeadersWidth = 51;
             this.AttendantTable.RowTemplate.Height = 24;
-            this.AttendantTable.Size = new System.Drawing.Size(752, 501);
+            this.AttendantTable.Size = new System.Drawing.Size(910, 501);
             this.AttendantTable.TabIndex = 1;
             this.AttendantTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendantTable_CellContentClick);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Gold;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
-            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(0, 0);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(30, 30);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 42;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // AddAttBtn
-            // 
-            this.AddAttBtn.BackColor = System.Drawing.Color.Gold;
-            this.AddAttBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddAttBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AddAttBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.Image")));
-            this.AddAttBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.ImageHover")));
-            this.AddAttBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("AddAttBtn.ImageNormal")));
-            this.AddAttBtn.Location = new System.Drawing.Point(0, 451);
-            this.AddAttBtn.Name = "AddAttBtn";
-            this.AddAttBtn.Size = new System.Drawing.Size(380, 50);
-            this.AddAttBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AddAttBtn.TabIndex = 41;
-            this.AddAttBtn.TabStop = false;
-            this.AddAttBtn.Click += new System.EventHandler(this.AddAttBtn_Click);
             // 
             // Column1
             // 
@@ -268,16 +268,16 @@ namespace LogosInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 501);
+            this.ClientSize = new System.Drawing.Size(1282, 501);
             this.Controls.Add(this.MainPanel);
             this.Name = "Attendants";
             this.Text = "Attendants";
             this.MainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddAttBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendantTable)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace LogosInventory
 {
     public partial class Category : Form
     {
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlCommand Com = new SqlCommand();
+        SqlDataReader dr;
+
         public Category()
         {
             InitializeComponent();
             LoadCategory();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand Com = new SqlCommand();
-        SqlDataReader dr;
-
         public void LoadCategory()
         {
             CategoryTable.Rows.Clear();
@@ -35,9 +34,10 @@ namespace LogosInventory
             }
             dr.Close();
             Con.Close();
+
         }
 
-        private void customButton1_Click_1(object sender, EventArgs e)
+        private void customButton1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
@@ -47,38 +47,38 @@ namespace LogosInventory
             string nameColumn = CategoryTable.Columns[e.ColumnIndex].Name;
             if (nameColumn == "Edit")
             {
-                AddCategory newAddCat = new AddCategory();
-                newAddCat.CategoryName.Text = CategoryTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                AddCategory newAddCategory = new AddCategory();
+                newAddCategory.CategoryID.Text = CategoryTable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                newAddCategory.CategoryName.Text = CategoryTable.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-                newAddCat.SaveBtn.Enabled = false;
-                newAddCat.UpdateBtn.Enabled = true;
+                newAddCategory.SaveBtn.Enabled = false;
+                newAddCategory.UpdateBtn.Enabled = true;
+                newAddCategory.CategoryID.Enabled = false;
 
-
-                newAddCat.ShowDialog();
+                newAddCategory.ShowDialog();
             }
             else if (nameColumn == "Delete")
             {
                 if (MessageBox.Show("Are you sure you want to delete this category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Con.Open();
-                    Com = new SqlCommand("delete from Category where Username like'" + CategoryTable.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", Con);
+                    Com = new SqlCommand("delete from Category where CategoryID like'" + CategoryTable.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", Con);
                     Com.ExecuteNonQuery();
                     Con.Close();
-                    MessageBox.Show("Attendant Deleted!");
+                    MessageBox.Show("Category Deleted!");
                 }
             }
             LoadCategory();
 
         }
 
-        private void AddCatBtn_Click(object sender, EventArgs e)
+        private void AddProdBtn_Click(object sender, EventArgs e)
         {
-            AddCategory newAddCat = new AddCategory();
-            newAddCat.SaveBtn.Enabled = true;
-            newAddCat.UpdateBtn.Enabled = false;
-
-            newAddCat.ShowDialog();
-
+            AddCategory NewAddCat = new AddCategory();
+            NewAddCat.SaveBtn.Enabled = true;
+            NewAddCat.UpdateBtn.Enabled = false;
+            NewAddCat.CategoryID.Enabled = false;
+            NewAddCat.ShowDialog();
             LoadCategory();
 
         }

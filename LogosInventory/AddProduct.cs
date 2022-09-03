@@ -19,10 +19,10 @@ namespace LogosInventory
         public AddProduct()
         {
             InitializeComponent();
-            LoadCategory();
+            LoadCatCombo();
         }
 
-        public void LoadCategory()
+        public void LoadCatCombo()
         {
             CategoryCombo.Items.Clear();
             SqlCommand cm = new SqlCommand("select CategoryName from Category", Con);
@@ -53,12 +53,13 @@ namespace LogosInventory
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into Product values(@ProductName, @Price, @ProductQty, @ExpiryDate, @ProductCategory)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into Product values(@ProductName, @Price, @ProductCategory, @ProductQty, @ExpiryDate)", Con);
                     cmd.Parameters.AddWithValue("@ProductName", ProductName.Text);
                     cmd.Parameters.AddWithValue("@Price", Convert.ToInt32(Price.Text));
+                    cmd.Parameters.AddWithValue("@ProductCategory", CategoryCombo.Text);
                     cmd.Parameters.AddWithValue("@ProductQty", Convert.ToInt32(Quantity.Text));
                     cmd.Parameters.AddWithValue("@ExpiryDate", ExpiryDate.Value.Date);
-                    cmd.Parameters.AddWithValue("@ProductCategory", CategoryCombo.Text);
+
 
                     cmd.ExecuteNonQuery();
                     Con.Close();
@@ -86,12 +87,12 @@ namespace LogosInventory
                     if (MessageBox.Show("Are you sure you want to edit this product?", "Edit Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         Con.Open();
-                        SqlCommand cmd = new SqlCommand("update Product set ProductName=@ProductName, Price=@Price, ProductQty=@ProductQty, ExpiryDate=@ExpiryDate, ProductCategory=@ProductCategory where ProductID like'" + ProductName.Text + "'", Con);
+                        SqlCommand cmd = new SqlCommand("update Product set ProductName=@ProductName, Price=@Price, PCategory=@PCategory, ProductQty=@ProductQty, ExpiryDate=@ExpiryDate where ProductID like'" + ProdID.Text + "'", Con);
                         cmd.Parameters.AddWithValue("@ProductName", ProductName.Text);
                         cmd.Parameters.AddWithValue("@Price", Convert.ToInt32(Price.Text));
+                        cmd.Parameters.AddWithValue("@PCategory", CategoryCombo.Text);
                         cmd.Parameters.AddWithValue("@ProductQty", Convert.ToInt32(Quantity.Text));
                         cmd.Parameters.AddWithValue("@ExpiryDate", ExpiryDate.Value.Date);
-                        cmd.Parameters.AddWithValue("@ProductCategory", CategoryCombo.Text);
 
                         cmd.ExecuteNonQuery();
                         Con.Close();
@@ -107,5 +108,6 @@ namespace LogosInventory
             }
 
         }
+
     }
 }

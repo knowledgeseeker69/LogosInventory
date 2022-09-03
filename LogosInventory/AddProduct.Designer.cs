@@ -41,11 +41,13 @@ namespace LogosInventory
             this.SaveBtn = new System.Windows.Forms.Button();
             this.Quantity = new System.Windows.Forms.TextBox();
             this.Price = new System.Windows.Forms.TextBox();
+            this.ProdID = new System.Windows.Forms.TextBox();
             this.ProductName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,16 +65,18 @@ namespace LogosInventory
             this.MainPanel.Controls.Add(this.SaveBtn);
             this.MainPanel.Controls.Add(this.Quantity);
             this.MainPanel.Controls.Add(this.Price);
+            this.MainPanel.Controls.Add(this.ProdID);
             this.MainPanel.Controls.Add(this.ProductName);
             this.MainPanel.Controls.Add(this.label6);
             this.MainPanel.Controls.Add(this.label4);
             this.MainPanel.Controls.Add(this.label3);
             this.MainPanel.Controls.Add(this.label2);
+            this.MainPanel.Controls.Add(this.label7);
             this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(540, 590);
+            this.MainPanel.Size = new System.Drawing.Size(540, 653);
             this.MainPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -100,7 +104,7 @@ namespace LogosInventory
             this.CancelBtn.BackColor = System.Drawing.Color.LightCoral;
             this.CancelBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.Color.White;
-            this.CancelBtn.Location = new System.Drawing.Point(388, 539);
+            this.CancelBtn.Location = new System.Drawing.Point(388, 584);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(87, 33);
             this.CancelBtn.TabIndex = 23;
@@ -113,7 +117,7 @@ namespace LogosInventory
             this.UpdateBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.UpdateBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(223, 539);
+            this.UpdateBtn.Location = new System.Drawing.Point(223, 584);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(92, 33);
             this.UpdateBtn.TabIndex = 22;
@@ -123,15 +127,17 @@ namespace LogosInventory
             // 
             // CategoryCombo
             // 
+            this.CategoryCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryCombo.FormattingEnabled = true;
-            this.CategoryCombo.Location = new System.Drawing.Point(192, 331);
+            this.CategoryCombo.Location = new System.Drawing.Point(192, 379);
             this.CategoryCombo.Name = "CategoryCombo";
             this.CategoryCombo.Size = new System.Drawing.Size(225, 24);
             this.CategoryCombo.TabIndex = 21;
             // 
             // ExpiryDate
             // 
-            this.ExpiryDate.Location = new System.Drawing.Point(192, 489);
+            this.ExpiryDate.Checked = false;
+            this.ExpiryDate.Location = new System.Drawing.Point(192, 531);
             this.ExpiryDate.Name = "ExpiryDate";
             this.ExpiryDate.Size = new System.Drawing.Size(225, 22);
             this.ExpiryDate.TabIndex = 20;
@@ -139,7 +145,7 @@ namespace LogosInventory
             // NewCatBtn
             // 
             this.NewCatBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewCatBtn.Location = new System.Drawing.Point(440, 329);
+            this.NewCatBtn.Location = new System.Drawing.Point(440, 374);
             this.NewCatBtn.Name = "NewCatBtn";
             this.NewCatBtn.Size = new System.Drawing.Size(65, 26);
             this.NewCatBtn.TabIndex = 18;
@@ -151,7 +157,7 @@ namespace LogosInventory
             this.SaveBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.SaveBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.ForeColor = System.Drawing.Color.White;
-            this.SaveBtn.Location = new System.Drawing.Point(46, 539);
+            this.SaveBtn.Location = new System.Drawing.Point(46, 584);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(103, 33);
             this.SaveBtn.TabIndex = 19;
@@ -161,21 +167,29 @@ namespace LogosInventory
             // 
             // Quantity
             // 
-            this.Quantity.Location = new System.Drawing.Point(192, 437);
+            this.Quantity.Location = new System.Drawing.Point(192, 481);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(225, 22);
             this.Quantity.TabIndex = 15;
             // 
             // Price
             // 
-            this.Price.Location = new System.Drawing.Point(192, 385);
+            this.Price.Location = new System.Drawing.Point(192, 431);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(225, 22);
             this.Price.TabIndex = 16;
             // 
+            // ProdID
+            // 
+            this.ProdID.Enabled = false;
+            this.ProdID.Location = new System.Drawing.Point(192, 279);
+            this.ProdID.Name = "ProdID";
+            this.ProdID.Size = new System.Drawing.Size(225, 22);
+            this.ProdID.TabIndex = 17;
+            // 
             // ProductName
             // 
-            this.ProductName.Location = new System.Drawing.Point(192, 279);
+            this.ProductName.Location = new System.Drawing.Point(192, 329);
             this.ProductName.Name = "ProductName";
             this.ProductName.Size = new System.Drawing.Size(225, 22);
             this.ProductName.TabIndex = 17;
@@ -184,7 +198,7 @@ namespace LogosInventory
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 490);
+            this.label6.Location = new System.Drawing.Point(57, 531);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 22);
             this.label6.TabIndex = 10;
@@ -194,7 +208,7 @@ namespace LogosInventory
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 437);
+            this.label4.Location = new System.Drawing.Point(78, 481);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 11;
@@ -204,7 +218,7 @@ namespace LogosInventory
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 385);
+            this.label3.Location = new System.Drawing.Point(103, 431);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 22);
             this.label3.TabIndex = 12;
@@ -214,17 +228,27 @@ namespace LogosInventory
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 331);
+            this.label2.Location = new System.Drawing.Point(73, 381);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 13;
             this.label2.Text = "Category";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(55, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 22);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Product ID";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 279);
+            this.label1.Location = new System.Drawing.Point(31, 329);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 22);
             this.label1.TabIndex = 14;
@@ -234,7 +258,7 @@ namespace LogosInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 590);
+            this.ClientSize = new System.Drawing.Size(540, 653);
             this.Controls.Add(this.MainPanel);
             this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -265,5 +289,7 @@ namespace LogosInventory
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button CancelBtn;
+        public System.Windows.Forms.TextBox ProdID;
+        private System.Windows.Forms.Label label7;
     }
 }

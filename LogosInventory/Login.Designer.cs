@@ -31,10 +31,10 @@ namespace LogosInventory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
             this.Username = new System.Windows.Forms.TextBox();
@@ -67,6 +67,18 @@ namespace LogosInventory
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1132, 501);
             this.MainPanel.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(422, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 39);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "OGOS";
             // 
             // label6
             // 
@@ -103,18 +115,6 @@ namespace LogosInventory
             this.label7.Size = new System.Drawing.Size(231, 39);
             this.label7.TabIndex = 19;
             this.label7.Text = "NVENTORY";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Green;
-            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(422, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 39);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "OGOS";
             // 
             // LoginBtn
             // 
@@ -174,6 +174,7 @@ namespace LogosInventory
             // 
             // UserType
             // 
+            this.UserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UserType.FormattingEnabled = true;
             this.UserType.Items.AddRange(new object[] {
             "Administrator",

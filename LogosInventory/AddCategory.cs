@@ -13,13 +13,18 @@ namespace LogosInventory
 {
     public partial class AddCategory : Form
     {
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlCommand cmd = new SqlCommand();
+
         public AddCategory()
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rashid\Documents\LogosInventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand cm = new SqlCommand();
 
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -29,15 +34,16 @@ namespace LogosInventory
             }
             else
             {
+
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into Category values(@CategoryName)", Con);
+                    cmd = new SqlCommand("insert into Category values(@CategoryName)", Con);
                     cmd.Parameters.AddWithValue("@CategoryName", CategoryName.Text);
 
                     cmd.ExecuteNonQuery();
                     Con.Close();
-                    MessageBox.Show(this, "Category Created!");
+                    MessageBox.Show(this, "Category Added!");
                     this.Dispose();
                 }
                 catch (Exception Ex)
@@ -45,6 +51,7 @@ namespace LogosInventory
                     MessageBox.Show(Ex.Message);
                 }
             }
+            Con.Close();
 
         }
 
@@ -59,14 +66,14 @@ namespace LogosInventory
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("update Category set CategoryName=@CategoryName where CategoryName like '" + CategoryName.Text + "'", Con);
+                    cmd = new SqlCommand("update Category set CategoryName=@CategoryName where CategoryID like '" + CategoryID.Text + "'", Con);
                     cmd.Parameters.AddWithValue("@CategoryName", CategoryName.Text);
 
                     cmd.ExecuteNonQuery();
+                    Con.Close();
                     MessageBox.Show(this, "Category Data Updated!");
                     this.Dispose();
                 }
-
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
@@ -76,9 +83,5 @@ namespace LogosInventory
 
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
     }
 }

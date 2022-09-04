@@ -227,6 +227,7 @@ namespace LogosInventory
             this.Controls.Add(this.CategoryTable);
             this.Controls.Add(this.MainPanel);
             this.Name = "Category";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
             this.MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CategoryTable)).EndInit();

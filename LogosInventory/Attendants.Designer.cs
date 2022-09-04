@@ -271,6 +271,7 @@ namespace LogosInventory
             this.ClientSize = new System.Drawing.Size(1282, 501);
             this.Controls.Add(this.MainPanel);
             this.Name = "Attendants";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attendants";
             this.MainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

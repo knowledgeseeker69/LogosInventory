@@ -145,12 +145,13 @@ namespace LogosInventory
             // NewCatBtn
             // 
             this.NewCatBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewCatBtn.Location = new System.Drawing.Point(440, 374);
+            this.NewCatBtn.Location = new System.Drawing.Point(438, 374);
             this.NewCatBtn.Name = "NewCatBtn";
-            this.NewCatBtn.Size = new System.Drawing.Size(65, 26);
+            this.NewCatBtn.Size = new System.Drawing.Size(65, 37);
             this.NewCatBtn.TabIndex = 18;
             this.NewCatBtn.Text = "New";
             this.NewCatBtn.UseVisualStyleBackColor = true;
+            this.NewCatBtn.Click += new System.EventHandler(this.NewCatBtn_Click);
             // 
             // SaveBtn
             // 

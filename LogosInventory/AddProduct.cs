@@ -109,5 +109,15 @@ namespace LogosInventory
 
         }
 
+        private void NewCatBtn_Click(object sender, EventArgs e)
+        {
+            AddCategory NewAddCat = new AddCategory();
+            NewAddCat.SaveBtn.Enabled = true;
+            NewAddCat.UpdateBtn.Enabled = false;
+            NewAddCat.CategoryID.Enabled = false;
+            NewAddCat.ShowDialog();
+            LoadCatCombo();
+
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1132, 501);
+            this.MainPanel.Size = new System.Drawing.Size(693, 405);
             this.MainPanel.TabIndex = 0;
             // 
             // label4
@@ -74,7 +74,7 @@ namespace LogosInventory
             this.label4.BackColor = System.Drawing.Color.Green;
             this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(422, 113);
+            this.label4.Location = new System.Drawing.Point(179, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 39);
             this.label4.TabIndex = 20;
@@ -86,7 +86,7 @@ namespace LogosInventory
             this.label6.BackColor = System.Drawing.Color.Green;
             this.label6.Font = new System.Drawing.Font("Goudy Stout", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(338, 86);
+            this.label6.Location = new System.Drawing.Point(95, 38);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 66);
             this.label6.TabIndex = 17;
@@ -98,7 +98,7 @@ namespace LogosInventory
             this.label5.BackColor = System.Drawing.Color.Green;
             this.label5.Font = new System.Drawing.Font("Goudy Stout", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(528, 86);
+            this.label5.Location = new System.Drawing.Point(285, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 66);
             this.label5.TabIndex = 18;
@@ -110,7 +110,7 @@ namespace LogosInventory
             this.label7.BackColor = System.Drawing.Color.Green;
             this.label7.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(604, 113);
+            this.label7.Location = new System.Drawing.Point(361, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(231, 39);
             this.label7.TabIndex = 19;
@@ -125,7 +125,7 @@ namespace LogosInventory
             this.LoginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Black;
-            this.LoginBtn.Location = new System.Drawing.Point(507, 370);
+            this.LoginBtn.Location = new System.Drawing.Point(298, 330);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(100, 51);
             this.LoginBtn.TabIndex = 11;
@@ -135,15 +135,15 @@ namespace LogosInventory
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(474, 320);
+            this.Password.Location = new System.Drawing.Point(265, 280);
             this.Password.Name = "Password";
-            this.Password.PasswordChar = '#';
             this.Password.Size = new System.Drawing.Size(175, 22);
             this.Password.TabIndex = 9;
+            this.Password.UseSystemPasswordChar = true;
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(474, 255);
+            this.Username.Location = new System.Drawing.Point(265, 215);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(175, 22);
             this.Username.TabIndex = 10;
@@ -154,7 +154,7 @@ namespace LogosInventory
             this.label3.BackColor = System.Drawing.Color.Green;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(470, 295);
+            this.label3.Location = new System.Drawing.Point(261, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 22);
             this.label3.TabIndex = 7;
@@ -166,7 +166,7 @@ namespace LogosInventory
             this.label2.BackColor = System.Drawing.Color.Green;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(470, 230);
+            this.label2.Location = new System.Drawing.Point(261, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 8;
@@ -179,7 +179,7 @@ namespace LogosInventory
             this.UserType.Items.AddRange(new object[] {
             "Administrator",
             "Attendant"});
-            this.UserType.Location = new System.Drawing.Point(474, 194);
+            this.UserType.Location = new System.Drawing.Point(265, 154);
             this.UserType.Name = "UserType";
             this.UserType.Size = new System.Drawing.Size(175, 24);
             this.UserType.TabIndex = 6;
@@ -190,7 +190,7 @@ namespace LogosInventory
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(471, 169);
+            this.label1.Location = new System.Drawing.Point(262, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 5;
@@ -200,7 +200,7 @@ namespace LogosInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 501);
+            this.ClientSize = new System.Drawing.Size(693, 405);
             this.Controls.Add(this.MainPanel);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

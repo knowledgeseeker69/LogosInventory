@@ -151,6 +151,7 @@ namespace LogosInventory
             this.Controls.Add(this.CatID);
             this.Controls.Add(this.label1);
             this.Name = "AddCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCategory";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

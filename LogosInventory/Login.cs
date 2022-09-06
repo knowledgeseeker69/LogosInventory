@@ -38,38 +38,41 @@ namespace LogosInventory
 
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
-            try
+            if(UserType.SelectedItem.ToString() == "Administrator")
             {
-                if(UserType.SelectedIndex == 0)
+                try
                 {
-                    cmd = new SqlCommand("select * from AdminAcc where Username=@Username and Password=@Password", Con);
-                    cmd.Parameters.AddWithValue("Username", Username.Text);
-                    cmd.Parameters.AddWithValue("Password", Password.Text);
-                    Con.Open();
-                    dr = cmd.ExecuteReader();
-                    dr.Read();
-                    if (dr.HasRows)
+                    if (UserType.SelectedIndex == 0)
                     {
-                        MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        AdminMenu newMenu = new AdminMenu();
-                        newMenu.Show();
-                    }
+                        cmd = new SqlCommand("select * from AdminAcc where Username=@Username and Password=@Password", Con);
+                        cmd.Parameters.AddWithValue("Username", Username.Text);
+                        cmd.Parameters.AddWithValue("Password", Password.Text);
+                        Con.Open();
+                        dr = cmd.ExecuteReader();
+                        dr.Read();
+                        if (dr.HasRows)
+                        {
+                            MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            AdminMenu newMenu = new AdminMenu();
+                            newMenu.Show();
+                        }
 
-                    else if (Username.Text == "" || Password.Text == "")
-                    {
-                        MessageBox.Show(this, "Please fill all required fields");
+                        else if (Username.Text == "" || Password.Text == "")
+                        {
+                            MessageBox.Show(this, "Please fill all required fields");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        Con.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    Con.Close();
                 }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
             }
         }
 

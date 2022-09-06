@@ -76,6 +76,12 @@
     <Compile Include="Administrators.Designer.cs">
       <DependentUpon>Administrators.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendantMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendantMenu.Designer.cs">
+      <DependentUpon>AttendantMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Attendants.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrators.resx">
       <DependentUpon>Administrators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendantMenu.resx">
+      <DependentUpon>AttendantMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Attendants.resx">
       <DependentUpon>Attendants.cs</DependentUpon>

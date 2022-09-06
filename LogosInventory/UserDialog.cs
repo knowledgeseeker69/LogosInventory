@@ -16,11 +16,52 @@ namespace LogosInventory
         {
             InitializeComponent();
         }
-
-        private void customButton1_Click(object sender, EventArgs e)
+        private Form WorkingForm = null;
+        private void OpenNewForm(Form NewForm)
         {
-
+            if (WorkingForm != null)
+                WorkingForm.Close();
+            WorkingForm = NewForm;
+            NewForm.TopLevel = false;
+            NewForm.FormBorderStyle = FormBorderStyle.None;
+            NewForm.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(NewForm);
+            MainPanel.Tag = NewForm;
+            NewForm.BringToFront();
+            NewForm.Show();
         }
+
+        private void AdminBtn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenNewForm(new Attendants());
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void AttendantBtn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenNewForm(new Attendants());
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            AdminMenu newMenu = new AdminMenu();
+            newMenu.Show();
+        }
+
 
     }
 }

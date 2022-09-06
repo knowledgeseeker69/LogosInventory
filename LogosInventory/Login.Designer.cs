@@ -42,6 +42,7 @@ namespace LogosInventory
             this.label2 = new System.Windows.Forms.Label();
             this.UserType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.PassCheck = new System.Windows.Forms.CheckBox();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace LogosInventory
             this.MainPanel.BackColor = System.Drawing.Color.White;
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.Controls.Add(this.PassCheck);
             this.MainPanel.Controls.Add(this.label4);
             this.MainPanel.Controls.Add(this.label6);
             this.MainPanel.Controls.Add(this.label5);
@@ -65,7 +67,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(693, 405);
+            this.MainPanel.Size = new System.Drawing.Size(693, 468);
             this.MainPanel.TabIndex = 0;
             // 
             // label4
@@ -125,7 +127,7 @@ namespace LogosInventory
             this.LoginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Black;
-            this.LoginBtn.Location = new System.Drawing.Point(298, 330);
+            this.LoginBtn.Location = new System.Drawing.Point(296, 327);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(100, 51);
             this.LoginBtn.TabIndex = 11;
@@ -196,11 +198,25 @@ namespace LogosInventory
             this.label1.TabIndex = 5;
             this.label1.Text = "Login As:";
             // 
+            // PassCheck
+            // 
+            this.PassCheck.AutoSize = true;
+            this.PassCheck.BackColor = System.Drawing.Color.Green;
+            this.PassCheck.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassCheck.ForeColor = System.Drawing.Color.White;
+            this.PassCheck.Location = new System.Drawing.Point(283, 414);
+            this.PassCheck.Name = "PassCheck";
+            this.PassCheck.Size = new System.Drawing.Size(142, 23);
+            this.PassCheck.TabIndex = 21;
+            this.PassCheck.Text = "Show Password";
+            this.PassCheck.UseVisualStyleBackColor = false;
+            this.PassCheck.CheckedChanged += new System.EventHandler(this.PassCheck_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 405);
+            this.ClientSize = new System.Drawing.Size(693, 468);
             this.Controls.Add(this.MainPanel);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -225,6 +241,7 @@ namespace LogosInventory
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox PassCheck;
     }
 }
 

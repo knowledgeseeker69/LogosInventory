@@ -159,6 +159,7 @@ namespace LogosInventory
             this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customButton1.TabIndex = 50;
             this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // AddProdBtn
             // 

@@ -40,6 +40,8 @@ namespace LogosInventory
         private void customButton1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            AdminMenu newMenu = new AdminMenu();
+            newMenu.Show();
         }
 
         private void AttendantTable_CellContentClick(object sender, DataGridViewCellEventArgs e)

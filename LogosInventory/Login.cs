@@ -51,10 +51,11 @@ namespace LogosInventory
                     if (dr.HasRows)
                     {
                         MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Menu newMenu = new Menu();
                         this.Hide();
+                        AdminMenu newMenu = new AdminMenu();
                         newMenu.Show();
                     }
+
                     else if (Username.Text == "" || Password.Text == "")
                     {
                         MessageBox.Show(this, "Please fill all required fields");
@@ -72,6 +73,17 @@ namespace LogosInventory
             }
         }
 
+        private void PassCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(PassCheck.Checked == false)
+            {
+                Password.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                Password.UseSystemPasswordChar = false;
 
+            }
+        }
     }
 }

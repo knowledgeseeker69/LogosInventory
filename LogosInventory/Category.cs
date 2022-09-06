@@ -37,10 +37,6 @@ namespace LogosInventory
 
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
 
         private void CategoryTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,6 +77,11 @@ namespace LogosInventory
             NewAddCat.ShowDialog();
             LoadCategory();
 
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

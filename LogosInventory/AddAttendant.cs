@@ -44,7 +44,6 @@ namespace LogosInventory
                     cmd.Parameters.AddWithValue("@Phone", Phone.Text);
 
                     cmd.ExecuteNonQuery();
-                    Con.Close();
                     MessageBox.Show(this, "Attendant Added!");
                     this.Dispose();
                 }
@@ -82,7 +81,6 @@ namespace LogosInventory
                         cmd.Parameters.AddWithValue("@Phone", Phone.Text);
 
                         cmd.ExecuteNonQuery();
-                        Con.Close();
                         MessageBox.Show(this, "Attendant Data Updated!");
                         this.Dispose();
 

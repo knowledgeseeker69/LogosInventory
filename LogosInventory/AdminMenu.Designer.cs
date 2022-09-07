@@ -31,13 +31,15 @@ namespace LogosInventory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.customButton1 = new LogosInventory.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.customButton1 = new LogosInventory.CustomButton();
             this.AttendantMenuBtn = new LogosInventory.CustomButton();
             this.CategoryMenuBtn = new LogosInventory.CustomButton();
             this.ProductMenuBtn = new LogosInventory.CustomButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AttendantMenuBtn)).BeginInit();
@@ -50,6 +52,8 @@ namespace LogosInventory
             this.MainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.Controls.Add(this.label4);
+            this.MainPanel.Controls.Add(this.label6);
             this.MainPanel.Controls.Add(this.customButton1);
             this.MainPanel.Controls.Add(this.label3);
             this.MainPanel.Controls.Add(this.label2);
@@ -62,6 +66,20 @@ namespace LogosInventory
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1282, 501);
             this.MainPanel.TabIndex = 2;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Gold;
+            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
+            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
+            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
+            this.customButton1.Location = new System.Drawing.Point(0, 0);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(40, 40);
+            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customButton1.TabIndex = 3;
+            this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // label3
             // 
@@ -98,20 +116,6 @@ namespace LogosInventory
             this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Products";
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Gold;
-            this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
-            this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
-            this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(0, 0);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(40, 40);
-            this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customButton1.TabIndex = 3;
-            this.customButton1.TabStop = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // AttendantMenuBtn
             // 
@@ -158,6 +162,30 @@ namespace LogosInventory
             this.ProductMenuBtn.TabStop = false;
             this.ProductMenuBtn.Click += new System.EventHandler(this.ProductMenuBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(630, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 52);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "ENU";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Font = new System.Drawing.Font("Goudy Stout", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(501, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 82);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "M";
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,5 +216,7 @@ namespace LogosInventory
         private CustomButton CategoryMenuBtn;
         private CustomButton ProductMenuBtn;
         private CustomButton customButton1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -120,6 +120,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesRecords.Designer.cs">
+      <DependentUpon>SalesRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TillScreen.Designer.cs">
+      <DependentUpon>TillScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SalesRecords.resx">
+      <DependentUpon>SalesRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TillScreen.resx">
+      <DependentUpon>TillScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserDialog.resx">
       <DependentUpon>UserDialog.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,42 +38,67 @@ namespace LogosInventory
 
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
-            if(UserType.SelectedItem.ToString() == "Administrator")
+            try
             {
-                try
+                if (UserType.SelectedIndex == 0)
                 {
-                    if (UserType.SelectedIndex == 0)
+                    cmd = new SqlCommand("select * from AdminAcc where Username=@Username and Password=@Password", Con);
+                    cmd.Parameters.AddWithValue("Username", Username.Text);
+                    cmd.Parameters.AddWithValue("Password", Password.Text);
+                    Con.Open();
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+                    if (dr.HasRows)
                     {
-                        cmd = new SqlCommand("select * from AdminAcc where Username=@Username and Password=@Password", Con);
-                        cmd.Parameters.AddWithValue("Username", Username.Text);
-                        cmd.Parameters.AddWithValue("Password", Password.Text);
-                        Con.Open();
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        if (dr.HasRows)
-                        {
-                            MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            AdminMenu newMenu = new AdminMenu();
-                            newMenu.Show();
-                        }
-
-                        else if (Username.Text == "" || Password.Text == "")
-                        {
-                            MessageBox.Show(this, "Please fill all required fields");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        Con.Close();
+                        MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        AdminMenu newMenu = new AdminMenu();
+                        newMenu.Show();
                     }
+
+                    else if (Username.Text == "" || Password.Text == "")
+                    {
+                        MessageBox.Show(this, "Please fill all required fields");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    Con.Close();
                 }
-                catch (Exception Ex)
+                else if (UserType.SelectedIndex == 1)
                 {
-                    MessageBox.Show(Ex.Message);
+                    cmd = new SqlCommand("select * from Attendant where Username=@Username and Password=@Password", Con);
+                    cmd.Parameters.AddWithValue("Username", Username.Text);
+                    cmd.Parameters.AddWithValue("Password", Password.Text);
+                    Con.Open();
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+                    if (dr.HasRows)
+                    {
+                        MessageBox.Show("Logged in as " + dr["Username"].ToString() + ".", "Login Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        AttendantMenu newTill = new AttendantMenu();
+                        newTill.Show();
+                    }
+
+                    else if (Username.Text == "" || Password.Text == "")
+                    {
+                        MessageBox.Show(this, "Please fill all required fields");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    Con.Close();
                 }
+
             }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
         }
 
         private void PassCheck_CheckedChanged(object sender, EventArgs e)

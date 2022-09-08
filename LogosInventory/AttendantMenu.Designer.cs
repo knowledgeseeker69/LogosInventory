@@ -56,7 +56,7 @@ namespace LogosInventory
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1035, 591);
+            this.MainPanel.Size = new System.Drawing.Size(1029, 715);
             this.MainPanel.TabIndex = 0;
             // 
             // label4
@@ -65,7 +65,7 @@ namespace LogosInventory
             this.label4.BackColor = System.Drawing.Color.DarkGreen;
             this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(530, 95);
+            this.label4.Location = new System.Drawing.Point(474, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 52);
             this.label4.TabIndex = 24;
@@ -77,7 +77,7 @@ namespace LogosInventory
             this.label6.BackColor = System.Drawing.Color.DarkGreen;
             this.label6.Font = new System.Drawing.Font("Goudy Stout", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(401, 65);
+            this.label6.Location = new System.Drawing.Point(338, 101);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 82);
             this.label6.TabIndex = 23;
@@ -87,25 +87,25 @@ namespace LogosInventory
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DarkGreen;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(738, 431);
+            this.label2.Location = new System.Drawing.Point(713, 504);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 25);
+            this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sales";
+            this.label2.Text = "Sales Report";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(201, 431);
+            this.label1.Location = new System.Drawing.Point(206, 504);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Sales";
+            this.label1.Text = "Sales ";
             // 
             // customButton1
             // 
@@ -113,12 +113,13 @@ namespace LogosInventory
             this.customButton1.Image = ((System.Drawing.Image)(resources.GetObject("customButton1.Image")));
             this.customButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageHover")));
             this.customButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customButton1.ImageNormal")));
-            this.customButton1.Location = new System.Drawing.Point(672, 238);
+            this.customButton1.Location = new System.Drawing.Point(682, 311);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(200, 190);
             this.customButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customButton1.TabIndex = 0;
             this.customButton1.TabStop = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // SalesBtn
             // 
@@ -126,18 +127,19 @@ namespace LogosInventory
             this.SalesBtn.Image = ((System.Drawing.Image)(resources.GetObject("SalesBtn.Image")));
             this.SalesBtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("SalesBtn.ImageHover")));
             this.SalesBtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("SalesBtn.ImageNormal")));
-            this.SalesBtn.Location = new System.Drawing.Point(135, 238);
+            this.SalesBtn.Location = new System.Drawing.Point(145, 311);
             this.SalesBtn.Name = "SalesBtn";
             this.SalesBtn.Size = new System.Drawing.Size(200, 190);
             this.SalesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SalesBtn.TabIndex = 0;
             this.SalesBtn.TabStop = false;
+            this.SalesBtn.Click += new System.EventHandler(this.SalesBtn_Click);
             // 
             // AttendantMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 591);
+            this.ClientSize = new System.Drawing.Size(1029, 715);
             this.Controls.Add(this.MainPanel);
             this.Name = "AttendantMenu";
             this.Text = "AttendantMenu";
